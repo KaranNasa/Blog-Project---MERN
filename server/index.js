@@ -12,7 +12,7 @@ const Post = require('./models/Post')
 const uploadMiddleware = multer({dest: 'uploads/'});
 
 var salt=bcrypt.genSaltSync(10);
-const secret= 'iwddweffeewdwdwiowfifewefiweho23r';
+const secret= 'iwddweffeewdwdvewefiwehor';
 
 
 const app=express();
@@ -181,9 +181,3 @@ app.put('/post',uploadMiddleware.single('file'),async (req,res) => {
 app.listen(4000,()=>{
     console.log("Listening on port 4000");
 });
-
-
-
-// mongodb+srv://blog:6XTXvzdOjQNsXMIa@cluster0.9urpbyi.mongodb.net/?retryWrites=true&w=majority
-// username: blog
-// Password: 6XTXvzdOjQNsXMIa
